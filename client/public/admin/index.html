@@ -64,13 +64,10 @@
   <body>
     <div id="tina"></div>
     
-    <script src="https://unpkg.com/tinacms/dist/tinacms.min.js"></script>
-    <script src="https://unpkg.com/@tinacms/cli@latest/dist/index.umd.js"></script>
-    
     <script>
-      // Initialize TinaCMS
+      // Redirect to TinaCloud admin
       window.addEventListener('DOMContentLoaded', function() {
-        console.log('TinaCMS Admin Loading...');
+        console.log('Redirecting to TinaCloud Admin...');
         
         // Show loading state
         const root = document.getElementById('tina');
@@ -80,46 +77,16 @@
               <div class="spinner"></div>
               <h2 style="color: #333; margin: 0 0 10px 0;">TinaCMS Admin</h2>
               <p style="color: #666; margin: 0;">REALiving Content Management System</p>
-              <p style="color: #999; font-size: 14px; margin: 20px 0 0 0;">Loading editor...</p>
+              <p style="color: #999; font-size: 14px; margin: 20px 0 0 0;">Redirecting to TinaCloud...</p>
             </div>
           </div>
         `;
         
-        // Check if TinaCMS is loaded
-        if (window.TinaCMS) {
-          console.log('✓ TinaCMS loaded successfully');
-          console.log('✓ Client ID: bd936801-9e30-4584-b0fa-4b8adf05c8e0');
-          
-          // Wait a moment for full initialization
-          setTimeout(() => {
-            console.log('✓ TinaCMS ready');
-          }, 1000);
-        } else {
-          console.error('✗ TinaCMS failed to load');
-          root.innerHTML = `
-            <div class="tina-loading">
-              <div class="tina-loader" style="background: #fff3cd; border: 1px solid #ffc107;">
-                <h2 style="color: #856404; margin: 0 0 10px 0;">⚠️ Loading Error</h2>
-                <p style="color: #856404; margin: 0;">TinaCMS failed to initialize.</p>
-                <p style="color: #856404; font-size: 14px; margin: 20px 0 0 0;">
-                  Please check your Client ID and Token in tina/config.ts
-                </p>
-                <button onclick="location.reload()" style="
-                  margin-top: 20px;
-                  padding: 10px 20px;
-                  background: #667eea;
-                  color: white;
-                  border: none;
-                  border-radius: 6px;
-                  cursor: pointer;
-                  font-weight: 600;
-                ">
-                  Retry
-                </button>
-              </div>
-            </div>
-          `;
-        }
+        // Redirect to TinaCloud after 1 second
+        setTimeout(() => {
+          // Replace with your actual TinaCloud project URL
+          window.location.href = 'https://app.tina.io/projects/bd936801-9e30-4584-b0fa-4b8adf05c8e0/overview';
+        }, 1000);
       });
     </script>
   </body>
