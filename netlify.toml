@@ -1,11 +1,11 @@
 [build]
-  command = "pnpm run build"
-  publish = "dist/public"
-  functions = "dist"
+  command = "pnpm run build:static"
+  publish = "dist/client"
 
 [build.environment]
   NODE_VERSION = "22.13.0"
   PNPM_VERSION = "9.0.0"
+  CI = "true"
 
 # Redirect all non-file requests to index.html (SPA fallback)
 [[redirects]]
