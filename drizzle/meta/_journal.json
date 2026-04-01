@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1775083835268,
+      "tag": "0000_dizzy_tiger_shark",
+      "breakpoints": true
+    }
+  ]
+}

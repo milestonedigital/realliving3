@@ -7,6 +7,7 @@
 
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
 import {
   ArrowRight,
   Phone,
@@ -98,6 +99,10 @@ const stats = [
 ];
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
