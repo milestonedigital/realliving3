@@ -22,11 +22,8 @@ import NotFound from "./pages/NotFound";
 import ProfessionalCoaching from "./pages/ProfessionalCoaching";
 import BlogPost from "./pages/BlogPost";
 import EAPLogin from "./pages/EAPLogin";
-import AdminLogin from "./pages/AdminLogin";
-import AdminPanel from "./pages/AdminPanel";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <>
       <Navbar />
@@ -41,8 +38,6 @@ function Router() {
         <Route path="/professional-coaching" component={ProfessionalCoaching} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/eap-login" component={EAPLogin} />
-        <Route path="/admin-login" component={AdminLogin} />
-        <Route path="/admin" component={AdminPanel} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
