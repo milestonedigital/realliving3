@@ -1,0 +1,16 @@
+{
+  "name": "REALiving® — Solutions for Life and Work",
+  "short_name": "REALiving",
+  "description": "Helping individuals and organizations Be Their BEST® through comprehensive Employee Achievement Programs and wellness solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2BA99E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
