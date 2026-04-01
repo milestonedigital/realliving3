@@ -2,8 +2,8 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main",
-  clientId: "YOUR_CLIENT_ID", // Get from TinaCMS dashboard
-  token: "YOUR_TOKEN", // Get from TinaCMS dashboard
+  clientId: "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
+  token: "", // Token will be auto-generated
   build: {
     outputDir: "admin",
     publicDir: "public",
