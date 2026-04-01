@@ -5,6 +5,21 @@ export default defineConfig({
   clientId: "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
   token: "d06c9632ad0650a5fc9d83c3a22284d56958a777",
   
+  // GitHub configuration for authentication and commits
+  authProvider: {
+    provider: "github",
+    clientId: "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
+  },
+  
+  // GitHub token for commits
+  gitProvider: {
+    provider: "github",
+    owner: "milestonedigital",
+    repo: "realliving3",
+    token: "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",
+    branch: "main",
+  },
+  
   // Build configuration
   build: {
     outputDir: "admin",
