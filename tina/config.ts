@@ -2,21 +2,21 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main",
-  clientId: "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
-  token: "d06c9632ad0650a5fc9d83c3a22284d56958a777",
+  clientId: process.env.TINA_CLIENT_ID || "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
+  token: process.env.TINA_TOKEN || "d06c9632ad0650a5fc9d83c3a22284d56958a777",
   
   // GitHub configuration for authentication and commits
   authProvider: {
     provider: "github",
-    clientId: "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
+    clientId: process.env.TINA_CLIENT_ID || "bd936801-9e30-4584-b0fa-4b8adf05c8e0",
   },
   
-  // GitHub token for commits
+  // GitHub token for commits (from environment variable)
   gitProvider: {
     provider: "github",
     owner: "milestonedigital",
     repo: "realliving3",
-    token: "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",
+    token: process.env.GITHUB_TOKEN || "",
     branch: "main",
   },
   
@@ -37,7 +37,7 @@ export default defineConfig({
   // Search configuration
   search: {
     tina: {
-      indexerToken: "d06c9632ad0650a5fc9d83c3a22284d56958a777",
+      indexerToken: process.env.TINA_TOKEN || "d06c9632ad0650a5fc9d83c3a22284d56958a777",
       stopwordLanguages: ["eng", "fra"],
     },
     indexBatchSize: 100,
